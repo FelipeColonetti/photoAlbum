@@ -1,0 +1,32 @@
+<mat-card>
+  <mat-card-title>Login</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <section>
+        <mat-form-field class="full-width-input">
+          <input type="text" matInput placeholder="Usuário" formControlName="username" required>
+          <mat-error *ngIf="submitted && f.username.errors">
+            Usuário é obrigatório
+          </mat-error>
+        </mat-form-field>
+      </section>
+
+      <section>
+        <mat-form-field class="full-width-input">
+          <input type="password" matInput placeholder="Senha" formControlName="password" required>
+          <mat-error *ngIf="submitted && f.password.errors">
+            Senha é obrigatória
+          </mat-error>
+        </mat-form-field>
+      </section>
+
+      <section>
+        <div class="button-row">
+          <button [disabled]="loading" mat-raised-button color="primary">Login</button>
+          <a mat-button routerLink="../register" class="btn btn-link">Cadastrar</a>
+        </div>
+      </section>
+    </form>
+  </mat-card-content>
+</mat-card>

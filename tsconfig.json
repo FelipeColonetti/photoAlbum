@@ -1,0 +1,36 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "@photoAlbum/models": ["src/app/core/models"],
+      "@photoAlbum/services": ["src/app/core/services"],
+      "@photoAlbum/guards": ["src/app/core/guards"],
+      "@photoAlbum/interceptors": ["src/app/core/interceptors"],
+      "@photoAlbum/localstorage": ["src/app/core/localstorage"],
+      "@photoAlbum/components": ["src/app/shared/components"],
+      "@photoAlbum/assets/*": ["src/assets/*"],
+      "@photoAlbum/environment": ["src/environments/environment.ts"]
+  }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
+}

@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+@import "~@angular/material/theming";
+@include mat-core();
+
+$my-app-primary: mat-palette($mat-indigo);
+$my-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent);
+
+@include angular-material-theme($my-app-theme);
+
+.mat-form-field {
+  width: 100% !important;
+  min-width: 300px !important;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.error {
+  padding: 16px !important;
+  width: 300px !important;
+  color: white !important;
+  background-color: red !important;
+}
+
+.button {
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
+.button-row {
+  display: table-cell !important;
+  width: 400px !important;
+}
+
+section {
+  display: table !important;
+}
+
+.button-row .mat-button-base {
+  margin: 8px 8px 8px 0 !important;
+}
+
+.mat-snack-bar-container{
+  color: #dce0e9 !important;
+  background-color: #5056af !important;
+  border-color: #928fd1 !important;
+}
+
+table {
+  width: 100%;
+}
+
+.ngx-gallery { display: inline-block !important; margin-bottom: 20px !important; }
+
+.gallery-wrapper {
+  text-align: center !important;
+  margin-top: 50px !important;
+  .ngx-gallery {
+    display: inline-block !important;
+    margin-bottom: 20px !important;
+    /* width: 500px;
+     height: 400px;
+     border-color: #4a89ff;*/
+  }
+}
+
+.mat-card-header .mat-card-title{
+  min-height: 100px !important;
+}

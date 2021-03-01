@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button>
+    <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+  </button>
+  <h1>Photo Album</h1>
+    <span class="menu-spacer"></span>
+  <button mat-icon-button (click)="logout()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+
+      <a mat-list-item [routerLink]="'/photos'" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.toggle()"> Fotos </a>
+      <a mat-list-item [routerLink]="'/users'" (click)="sidenav.toggle()"> Usuários </a>
+      
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

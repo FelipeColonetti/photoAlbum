@@ -1,0 +1,17 @@
+<mat-card>
+
+  <mat-card-header>
+    <mat-card-title class="mat-card-title">{{dataSource.albumTitle}}</mat-card-title>
+  </mat-card-header>
+
+  <img mat-card-image [src]="dataSource.thumbnailUrl">  
+
+  <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
+    <button mat-button (click)="showAlbum()">VER FOTOS</button>
+  </mat-card-actions>
+
+</mat-card>
+
+<ng-template #callAlbumDialog>
+  <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+</ng-template>
